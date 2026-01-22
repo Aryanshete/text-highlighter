@@ -8,9 +8,17 @@ export default function Register() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [role, setRole] = useState("user");
+  
   const handleRegister = () => {
+  const newUser = { email, password, role };
+  
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  users.push(newUser);
+
+  localStorage.setItem("users", JSON.stringify(users));
   const success = register(email, password);
+  
 
   if (success) {
     alert("Registered successfully!");
@@ -36,6 +44,12 @@ export default function Register() {
         placeholder="Password"
         onChange={(e) => setPassword(e.target.value)}
       />
+      <select value={role} onChange={(e) => setRole(e.target.value)}>
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+      <option value="superadmin">Super Admin</option>
+      </select>
+
 
       <button style={buttonStyle} onClick={handleRegister}>
         Register

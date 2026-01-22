@@ -1,50 +1,68 @@
 "use client";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
-  const { login } = useAuth();
+  const { login, user } = useAuth();
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
     const ok = login(email, password);
-    if (!ok) alert("Invalid credentials");
+
+    if (!ok) {
+      alert("Invalid credentials");
+      return;
+    }
+
+    // ROLE-BASED REDIRECT
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (loggedUser.role === "superadmin") {
+      router.push("/superadmin/dashboard");
+    } else if (loggedUser.role === "admin") {
+      router.push("/admin/users");
+    } else if (loggedUser.role === "user") {
+      router.push("/user/dashboard");
+    }
   };
 
-return (
-  <div style={containerStyle}>
-    <div style={cardStyle}>
-      <h2>Login</h2>
+  return (
+    <div style={containerStyle}>
+      <div style={cardStyle}>
+        <h2>Login</h2>
 
-      <input
-        style={inputStyle}
-        placeholder="Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <input
+          style={inputStyle}
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <input
-        style={inputStyle}
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <input
+          style={inputStyle}
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <button style={buttonStyle} onClick={handleLogin}>
-        Login
-      </button>
+        <button style={buttonStyle} onClick={handleLogin}>
+          Login
+        </button>
 
-      <p style={{ marginTop: "15px" }}>
-        New user?{" "}
-        <a style={linkStyle} href="/register">
-          Register here
-        </a>
-      </p>
+        <p style={{ marginTop: "15px" }}>
+          New user?{" "}
+          <a style={linkStyle} href="/register">
+            Register here
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
-);
-
+  );
 }
+
 const containerStyle = {
   minHeight: "100vh",
   display: "flex",

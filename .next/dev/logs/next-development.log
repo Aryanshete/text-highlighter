@@ -1,11 +1,36 @@
-[00:00:01.319] Server  LOG     ✓ Ready in 884ms
-[00:00:02.238] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:37.470] Server  LOG     ✓ Compiled in 206.2s
-[00:03:37.669] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:53.520] Server  LOG     ✓ Compiled in 135.8s
-[00:05:53.647] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:53.792] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {output}). If you meant to render a collection of children, use an array instead.
-[00:07:42.930] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:07:43.174] Server  LOG     ✓ Compiled in 109.5s
-[00:07:43.372] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.238] Server  LOG     ✓ Ready in 797ms
+[00:00:01.986] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:47.182] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:46.456] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:46.746] Server  LOG     ✓ Compiled in 119.5s
+[00:03:46.959] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:32.185] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:04:32.491] Server  LOG     ✓ Compiled in 45.5s
+[00:04:32.724] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:12.962] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:22.312] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:31.338] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:26:06.649] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:26:36.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:34:02.001] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:43:45.340] Server  LOG     ✓ Compiled in 583.2s
+[01:45:20.014] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:45:20.777] Server  ERROR   ⨯ ReferenceError: register is not defined
+[01:45:20.975] Server  LOG     ✓ Compiled in 95.7s
+[01:45:26.583] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:45:28.217] Browser ERROR   uncaughtError: ReferenceError: register is not defined
+[01:46:17.032] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:46:17.353] Server  ERROR   ⨯ ReferenceError: register is not defined
+[01:46:17.702] Server  LOG     ✓ Compiled in 50.4s
+[01:46:22.045] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:46:22.215] Browser ERROR   uncaughtError: ReferenceError: register is not defined
+[01:46:30.291] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:46:30.700] Server  ERROR   ⨯ ReferenceError: register is not defined
+[01:46:30.818] Server  LOG     ✓ Compiled in 8.7s
+[01:46:31.115] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:46:31.358] Browser ERROR   uncaughtError: ReferenceError: register is not defined
+[01:46:40.891] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:46:40.892] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./context/AuthContext.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:46:40.893] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:46:41.431] Server  LOG     ✓ Compiled in 614ms
+[01:46:41.673] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

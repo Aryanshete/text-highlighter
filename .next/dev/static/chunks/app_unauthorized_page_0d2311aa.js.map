@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///E:/highlight-app/app/unauthorized/page.js"],"sourcesContent":["\"use client\";\r\n\r\nexport default function Unauthorized() {\r\n  return (\r\n    <div style={{ textAlign: \"center\", marginTop: \"60px\" }}>\r\n      <h1>Access Denied ❌</h1>\r\n      <p>You do not have permission to view this page.</p>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;;AAEe,SAAS;IACtB,qBACE,6LAAC;QAAI,OAAO;YAAE,WAAW;YAAU,WAAW;QAAO;;0BACnD,6LAAC;0BAAG;;;;;;0BACJ,6LAAC;0BAAE;;;;;;;;;;;;AAGT;KAPwB"}}]
+}

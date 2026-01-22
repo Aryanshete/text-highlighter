@@ -1,6 +1,8 @@
 {
-  "/api/gemini/route": "app/api/gemini/route.js",
+  "/admin/users/page": "app/admin/users/page.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/result/page": "app/result/page.js"
+  "/register/page": "app/register/page.js",
+  "/unauthorized/page": "app/unauthorized/page.js",
+  "/user/dashboard/page": "app/user/dashboard/page.js"
 }

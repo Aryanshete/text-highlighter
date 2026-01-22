@@ -22,7 +22,16 @@ function Register() {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [role, setRole] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("user");
     const handleRegister = ()=>{
+        const newUser = {
+            email,
+            password,
+            role
+        };
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
         const success = register(email, password);
         if (success) {
             alert("Registered successfully!");
@@ -38,7 +47,7 @@ function Register() {
                     children: "Create Account"
                 }, void 0, false, {
                     fileName: "[project]/app/register/page.js",
-                    lineNumber: 25,
+                    lineNumber: 33,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -47,7 +56,7 @@ function Register() {
                     onChange: (e)=>setEmail(e.target.value)
                 }, void 0, false, {
                     fileName: "[project]/app/register/page.js",
-                    lineNumber: 27,
+                    lineNumber: 35,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -57,7 +66,41 @@ function Register() {
                     onChange: (e)=>setPassword(e.target.value)
                 }, void 0, false, {
                     fileName: "[project]/app/register/page.js",
-                    lineNumber: 33,
+                    lineNumber: 41,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                    value: role,
+                    onChange: (e)=>setRole(e.target.value),
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                            value: "user",
+                            children: "User"
+                        }, void 0, false, {
+                            fileName: "[project]/app/register/page.js",
+                            lineNumber: 48,
+                            columnNumber: 7
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                            value: "admin",
+                            children: "Admin"
+                        }, void 0, false, {
+                            fileName: "[project]/app/register/page.js",
+                            lineNumber: 49,
+                            columnNumber: 7
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                            value: "superadmin",
+                            children: "Super Admin"
+                        }, void 0, false, {
+                            fileName: "[project]/app/register/page.js",
+                            lineNumber: 50,
+                            columnNumber: 7
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/app/register/page.js",
+                    lineNumber: 47,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -66,7 +109,7 @@ function Register() {
                     children: "Register"
                 }, void 0, false, {
                     fileName: "[project]/app/register/page.js",
-                    lineNumber: 40,
+                    lineNumber: 54,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -82,28 +125,28 @@ function Register() {
                             children: "Login"
                         }, void 0, false, {
                             fileName: "[project]/app/register/page.js",
-                            lineNumber: 46,
+                            lineNumber: 60,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/register/page.js",
-                    lineNumber: 44,
+                    lineNumber: 58,
                     columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/register/page.js",
-            lineNumber: 24,
+            lineNumber: 32,
             columnNumber: 5
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/register/page.js",
-        lineNumber: 23,
+        lineNumber: 31,
         columnNumber: 3
     }, this);
 }
-_s(Register, "3HRYevK9NB+3u2/udrvocj/hz3M=", false, function() {
+_s(Register, "xg3G3KEC/QrogkL9oiUfMPXqsWs=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$context$2f$AuthContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuth"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]

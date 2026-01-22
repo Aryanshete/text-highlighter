@@ -23,8 +23,10 @@ function AuthProvider({ children }) {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AuthProvider.useEffect": ()=>{
-            const savedUser = localStorage.getItem("authUser");
-            if (savedUser) setUser(savedUser);
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+            if (storedUser) {
+                setUser(storedUser);
+            }
         }
     }["AuthProvider.useEffect"], []);
     const register = (email, password)=>{
@@ -46,9 +48,8 @@ function AuthProvider({ children }) {
         const users = JSON.parse(localStorage.getItem("users")) || [];
         const found = users.find((u)=>u.email === email && u.password === password);
         if (found) {
-            localStorage.setItem("authUser", email);
-            setUser(email);
-            router.push("/");
+            localStorage.setItem("user", JSON.stringify(found));
+            setUser(found);
             return true;
         }
         return false;
