@@ -52,7 +52,7 @@ export default function Home() {
         onClick={highlightText}
         disabled={loading}
       >
-        {loading ? "Processing..." : "Highlight Important Points"}
+        {loading ? "Processing..." : " "}
       </button>
 
       {loading && <p style={styles.loadingText}>⏳ Please wait...</p>}
