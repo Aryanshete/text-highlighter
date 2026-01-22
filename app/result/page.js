@@ -1,18 +1,23 @@
 "use client";
 
-import { Suspense, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
 
 function ResultContent() {
-  const searchParams = useSearchParams();
-  const text = searchParams.get("text") || "No result found";
-
+  const [resultText, setResultText] = useState("Loading...");
   const [copied, setCopied] = useState(false);
 
-  const copyText = () => {
-    navigator.clipboard.writeText(text);
+  useEffect(() => {
+    const storedResult = JSON.parse(localStorage.getItem("highlightResult"));
+    setResultText(storedResult.output || "No result found");
+  }, []);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(resultText);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   return (
@@ -20,9 +25,9 @@ function ResultContent() {
       <h1 style={styles.title}>Highlighted Result</h1>
 
       <div style={styles.box}>
-        <pre style={styles.text}>{text}</pre>
+        <pre style={styles.text}>{resultText}</pre>
 
-        <button onClick={copyText} style={styles.button}>
+        <button onClick={handleCopy} style={styles.button}>
           {copied ? "Copied!" : "Copy"}
         </button>
       </div>

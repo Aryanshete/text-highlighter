@@ -1,4 +1,7 @@
 "use client";
+import ProtectedRoute from "../components/protectedRoute";
+import { useAuth } from "../context/AuthContext";
+
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -7,7 +10,8 @@ export default function Home() {
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
+  const { logout } = useAuth();
+  
   async function highlightText() {
     if (!text.trim()) {
       alert("Please enter some text");
@@ -25,7 +29,9 @@ export default function Home() {
 
       const data = await res.json();
 
-      router.push(`/result?text=${encodeURIComponent(data.output)}`);
+      localStorage.setItem("highlightResult", JSON.stringify(data));
+      router.push("/result");
+
     } catch (error) {
       alert("Something went wrong");
     } finally {
@@ -34,6 +40,26 @@ export default function Home() {
   }
 
   return (
+    <ProtectedRoute>
+
+      <button
+  onClick={logout}
+  style={{
+    position: "absolute",
+    top: 20,
+    right: 20,
+    padding: "8px 14px",
+    background: "#ef4444",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontSize: "14px",
+  }}
+>
+  Logout
+</button>
+
     <div style={styles.container}>
       <h1 style={styles.title}>AI Text Highlighter</h1>
 
@@ -52,11 +78,12 @@ export default function Home() {
         onClick={highlightText}
         disabled={loading}
       >
-        {loading ? "Processing..." : " "}
+        {loading ? "Processing..." : "Highlight Important Points"}
       </button>
 
       {loading && <p style={styles.loadingText}>⏳ Please wait...</p>}
     </div>
+     </ProtectedRoute>
   );
 }
 

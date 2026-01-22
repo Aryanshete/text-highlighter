@@ -1,2 +1,11 @@
-[00:00:02.778] Server  LOG     ✓ Ready in 1788ms
-[00:00:06.565] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.319] Server  LOG     ✓ Ready in 884ms
+[00:00:02.238] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:37.470] Server  LOG     ✓ Compiled in 206.2s
+[00:03:37.669] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:53.520] Server  LOG     ✓ Compiled in 135.8s
+[00:05:53.647] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:53.792] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {output}). If you meant to render a collection of children, use an array instead.
+[00:07:42.930] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:07:43.174] Server  LOG     ✓ Compiled in 109.5s
+[00:07:43.372] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
