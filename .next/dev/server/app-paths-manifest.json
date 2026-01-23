@@ -1,8 +1,16 @@
 {
+  "/admin/students/page": "app/admin/students/page.js",
+  "/admin/teachers/page": "app/admin/teachers/page.js",
   "/admin/users/page": "app/admin/users/page.js",
+  "/api/gemini/route": "app/api/gemini/route.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/register/page": "app/register/page.js",
-  "/unauthorized/page": "app/unauthorized/page.js",
-  "/user/dashboard/page": "app/user/dashboard/page.js"
+  "/result/page": "app/result/page.js",
+  "/superadmin/dashboard/page": "app/superadmin/dashboard/page.js",
+  "/superadmin/reports/page": "app/superadmin/reports/page.js",
+  "/superadmin/user-logs/page": "app/superadmin/user-logs/page.js",
+  "/superadmin/user-management/page": "app/superadmin/user-management/page.js",
+  "/user/dashboard/page": "app/user/dashboard/page.js",
+  "/user/profile/page": "app/user/profile/page.js",
+  "/user/subjects/page": "app/user/subjects/page.js"
 }

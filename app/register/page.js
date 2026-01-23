@@ -11,19 +11,20 @@ export default function Register() {
   const [role, setRole] = useState("user");
   
   const handleRegister = () => {
-  const newUser = { email, password, role };
-  
   const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const exists = users.find((u) => u.email === email);
+  if (exists) {
+    alert("User already exists. Please login.");
+    return; 
+  }
+
+  const newUser = { email, password, role };
   users.push(newUser);
 
   localStorage.setItem("users", JSON.stringify(users));
-  const success = register(email, password);
-  
-
-  if (success) {
-    alert("Registered successfully!");
-    router.push("/login");
-  }
+  alert("Registered successfully!");
+  router.push("/login");
 };
 
 
